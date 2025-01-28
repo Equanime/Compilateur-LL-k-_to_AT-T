@@ -27,13 +27,16 @@ make
 Lancez le programme avec :
 ./"fichier contenant le code inspiré du Pascal"
 ici :
+```
 ./test
+```
 
 **Bonus :**
+```
 Vous pourrez lire le code assembleur AT&T écrit dans le fichier .s, ici test.s .
-
-**This version Can handle :**
-
+```
+### Rules
+```
 // Program := [VarDeclarationPart] StatementPart
 
 // VarDeclarationPart := "VAR" ("ARRAY" VarArrayDeclaration | VarDeclaration) {";" ("ARRAY" VarArrayDeclaration | VarDeclaration)} "."
@@ -70,9 +73,10 @@ Vous pourrez lire le code assembleur AT&T écrit dans le fichier .s, ici test.s 
 // CharConst := "'" "\" Letter "'"
 // Digit := "0"|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"
 // Letter := "a"|...|"z"
+```
+### Functions
 
-FONCTION
-
+```
 - void Program(void) permet de potentiellement declarer des variables puis de faire des déclarations
 - void VarDeclarationPart(void) permet de declarer des tableaux et des variables de type INTEGER, BOOLEAN, DOUBLE et CHAR. 
 - void VarDeclaration(void) appellée par VarDeclarationPart(void) pour declarer plusieurs variables du même type à la suite.
@@ -96,9 +100,11 @@ FONCTION
 - enum TYPES Factor(void) défini un nombre ou une lettre ou une expression (entre parenthèse ou non) ou un facteur.
 - string IdentifierArray(string &sizeArray) renvoit l'indentifier d'un tableau et modifie la variable passé par référence en lui donnant la valeur entre crochets.
 - enum TYPES Identifier(void) un identifier est une lettre suivi de potentiellement une ou plusieurs lettres ou un ou plusieurs nombres dans le desordre.
+```
 
-Ajout personel:
+### Personal adds
 
+```
 - VarArrayDeclaration qui permet de declarer un ou plusieurs tableau à la suite en indiquant la taille son nom puis sa taille entre crocher
 - AssignementArrayStatement qui permet d'affecter un tableau de taille t en donnant exactement t valeur
 - AssignmentValueOfArrayStatement permet d'affacter une valeur à un element d'un tableau. Exemple : T[2]=3.
@@ -110,3 +116,4 @@ Ajout personel:
 - IdentifierArray qui permet d'identifier la declaration d'un tableau
 - ajout de map<string, enum TYPES> DeclaredVariablesArray pour stocker les identifiants de tableaux uniquement
 - operation sur les doubles
+```
